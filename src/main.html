@@ -1,0 +1,19 @@
+<h1>Calculo de Juros</h1>
+<div>Value:</div>
+<input type="number" step="0.01" [(ngModel)] = "value"/>
+ <div>Taxa de Juros:</div>
+ <input type="number" step="0.01" [(ngModel)] = "rate"/>
+ <div>Months:</div>
+ <input type="number" [(ngModel)] = "month"/>
+ <hr />
+ <table border="1">
+  <tr>
+    <th>Month</th>
+    <th>Value</th>
+  </tr>
+  <tr *ngFor="let item of getInteresetValues(); index as i">
+    <td>{{i + 1}}</td>
+    <td>{{item | currency}}</td>
+  </tr>
+ </table>
+
